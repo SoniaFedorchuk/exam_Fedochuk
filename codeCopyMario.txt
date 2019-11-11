@@ -65,3 +65,11 @@ void CheckVar(char* variant)
 		}
 	}
 }
+void CheckHeight(char* height)
+{
+	while (!atoi(height) || height == 0)
+	{
+		cout << "Enter normal height\n";
+		cin >> height;
+	}
+}
