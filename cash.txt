@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <math.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float summa;
+	do
+	{
+		cout << "Enter cash: ";
+		cin >> summa;
+	} while (summa < 0);
+
+
+	summa = summa * 100;
+	summa = roundf(summa);
+	int summa2 = (int)summa;
+	int quarters = 0;
+	int dimes = 0;
+	int nickels = 0;
+	int pennies = 0;
+	int counter = 0;
+	while (summa2 >= 25)
+	{
+		summa2 = summa2 - 25;
+		quarters = quarters + 1;
+		counter++;
+	}
+	while (summa2 >= 10)
+	{
+		summa2 = summa2 - 10;
+		dimes = dimes + 1;
+		counter++;
+	}
+	while (summa2 >= 5)
+	{
+		summa2 = summa2 - 5;
+		nickels = nickels + 1;
+		counter++;
+	}
+	while (summa2 >= 1)
+	{
+		summa2 = summa2 - 1;
+		pennies = pennies + 1;
+		counter++;
+	}
+	cout << "25-" << quarters << '\n' << "10-" << dimes << '\n' << "5-" << nickels << '\n' << "1-" << pennies << '\n';
+	system("pause");
+	return 0;
+}
